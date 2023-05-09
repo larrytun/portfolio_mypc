@@ -1,89 +1,168 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.21.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.21.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.21.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project 1: My 2000s Computer by Larry Tunseth</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="screen">
+      <div class="desktop">
+        <div class="programs">
+          <div class="row">
+            <div id="paint" class="program">
+              <div class="icon paint"></div>
+              <div class="name">
+                <p>Paint</p>
+              </div>
+            </div>
+            <div id="lemmings" class="program">
+              <div class="icon lemmings"></div>
+              <div class="name">
+                <p>Lemmings</p>
+              </div>
+            </div>
+            <div class="program">
+              <div class="icon messenger"></div>
+              <div class="name">
+                <p>Messenger</p>
+              </div>
+            </div>
+            <div id="oregon" class="program">
+              <div class="icon oregon"></div>
+              <div class="name">
+                <p>Oregon Trail</p>
+              </div>
+            </div>
+          </div>
+          <div class="row two">
+            <div id="music" class="program">
+              <div class="icon music"></div>
+              <div class="name">
+                <p>Music</p>
+              </div>
+            </div>
+            <div id="scan" class="program">
+              <div class="icon scan"></div>
+              <div class="name">
+                <p>Scan</p>
+              </div>
+            </div>
+            <div id="photos" class="program">
+              <div class="icon photos"></div>
+              <div class="name">
+                <p>Photos</p>
+              </div>
+            </div>
+            <div class="program">
+              <div class="icon settings"></div>
+              <div class="name">
+                <p>Settings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="music_app">
+          <div class="window_header">
+            <div class="icon_xs music"></div>
+            <h2 class="window_title">Music Player</h2>
+            <div id="close-01" class="close_sm"></div>
+          </div>
+          <div id="music-player" class="music_player">
+            <div class="music_time">[<span id="song-number"></span>]&nbsp;<span id="current-time-played">00:00</span></div>
+            <img id="album-art" src="" alt="Album Art">
+            <audio id="audio-player" controls style="display: none;"></audio>
+            <div class="buttons">
+              <button id="play">Play</button>
+              <button id="pause">Pause</button>
+              <button id="previous-song">Previous</button>
+              <button id="next-song">Next</button>
+            </div>
+            <div class="music_info artist"><u>A</u>rtist:&nbsp;<span id="artist-name" class="song_data"></span></div>
+            <div class="music_info track"><u>T</u>rack:&nbsp;<span id="song-name" class="song_data"></span></div>
+            <div class="music_info album"><u>A</u>lbum:&nbsp;<span id="album-name" class="song_data"></span></div>
+          </div>
+          <div class="window_footer">
+            <div class="half">
+              <p>Total Play:&nbsp;<span id="another-time-played">00:00</span>&nbsp;m:s</p>
+            </div>
+            <div class="half"></div>
+          </div>
+        </div>
+        <div class="photos_app">
+          <div class="window_header">
+            <div class="icon_xs photos"></div>
+            <h2 class="window_title">Photos</h2>
+            <div id="close-03" class="close_sm"></div>
+          </div>
+          <div id="images-container" class="gallery">
+          </div>
+          <div class="window_footer">
+            <div class="half">
+              <p>Total Images: <span id="uploaded-images-2">0</span></p>
+            </div>
+            <div class="half"></div>
+          </div>
+        </div>
+        <div class="taskbar">
+          <div class="start_button">
+            <img src="../img/windows.png" alt="windows 98 icon">
+            <p>Start</p>
+          </div>
+          <div class="clock">
+            <span id="current-time"></span>
+          </div>
+        </div>
+      </div>
+      <iframe class="paint_program" width="100%" height="100%" src="https://archive.org/embed/paint_20201126" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+      <iframe class="lemmings_program" width="100%" height="100%" src="https://archive.org/embed/Lemmings_1020" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+      <iframe class="oregon_program" width="100%" height="100%" src="https://archive.org/embed/oregon-trail-deluxe_202210" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+      <div id="back_01" class="back_button">← <u>E</u>scape</div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <div class="scan_app">
+      <div class="window_header">
+        <div class="icon_xs scan"></div>
+        <h2 class="window_title">Scanner</h2>
+        <div id="close-02" class="close_sm"></div>
+      </div>
+      <input type="file" id="image-upload" accept="image/*" multiple style="display: none;">
+      <p class="file_name" id="selected-files"></p>
+      <button id="select-images">Browse Files</button>
+      <button id="upload-button">Scan to Photos</button>
+      <div class="window_footer">
+        <div class="half">
+          <p>Photos Scanned: <span id="uploaded-images">0</span></p>
+        </div>
+        <div class="half">
+          <p>
+            <span class="loading_01">Processing...</span>
+            <span class="success_01">Successfully Scanned to Photos!</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="desk"></div>
+    <div id="power" class="power_button"></div>
+  </div>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyAe1dB9i8RPT0lNrvWFXzSuuyWONvcidhc",
+    authDomain: "portfolio-7e3d5.firebaseapp.com",
+    projectId: "portfolio-7e3d5",
+    storageBucket: "portfolio-7e3d5.appspot.com",
+    messagingSenderId: "428997440798",
+    appId: "1:428997440798:web:8f268f57a3b0a70e4d450f",
+    measurementId: "G-HF6E6EJDGB"
+  };
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<script src="../js/script.js" type="text/javascript"></script>
+</body>
 </html>
