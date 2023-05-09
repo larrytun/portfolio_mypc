@@ -2,74 +2,74 @@ $(document).ready(function() {
   const songs = [{
       number: "01",
       title: "Seven Nation Army",
-      src: "../music/SevenNationArmy.mp3",
+      src: "music/SevenNationArmy.mp3",
       album: "Elephant",
       artist: "The White Stripes",
-      albumArt: "../img/whitestripes.jpg"
+      albumArt: "img/whitestripes.jpg"
     },
     {
       number: "02",
       title: "What I Got",
-      src: "../music/WhatIGot.mp3",
+      src: "music/WhatIGot.mp3",
       album: "Sublime",
       artist: "Sublime",
-      albumArt: "../img/sublime.jpg"
+      albumArt: "img/sublime.jpg"
     },
     {
       number: "03",
       title: "My Own Worst Enemy",
-      src: "../music/MyOwnWorstEnemy.mp3",
+      src: "music/MyOwnWorstEnemy.mp3",
       album: "A Place in the Sun",
       artist: "Lit",
-      albumArt: "../img/lit.jpg"
+      albumArt: "img/lit.jpg"
     },
     {
       number: "04",
       title: "Ms. Jackson",
-      src: "../music/MsJackson.mp3",
+      src: "music/MsJackson.mp3",
       album: "Stankonia",
       artist: "OutKast",
-      albumArt: "../img/outkast.jpg"
+      albumArt: "img/outkast.jpg"
     },
     {
       number: "05",
       title: "Around The World",
-      src: "../music/AroundTheWorld.mp3",
+      src: "music/AroundTheWorld.mp3",
       album: "Homework",
       artist: "Daft Punk",
-      albumArt: "../img/daftpunk.jpg"
+      albumArt: "img/daftpunk.jpg"
     },
     {
       number: "06",
       title: "Canned Heat",
-      src: "../music/CannedHeat.mp3",
+      src: "music/CannedHeat.mp3",
       album: "Synkronized",
       artist: "Jamiroquai",
-      albumArt: "../img/jamiroquai.png"
+      albumArt: "img/jamiroquai.png"
     },
     {
       number: "07",
       title: "Drive",
-      src: "../music/Drive.mp3",
+      src: "music/Drive.mp3",
       album: "Make Yourself",
       artist: "Incubus",
-      albumArt: "../img/incubus.jpg"
+      albumArt: "img/incubus.jpg"
     },
     {
       number: "08",
       title: "The Middle",
-      src: "../music/TheMiddle.mp3",
+      src: "music/TheMiddle.mp3",
       album: "Bleed America",
       artist: "Jimmy Eat World",
-      albumArt: "../img/jimmyeatworld.jpg"
+      albumArt: "img/jimmyeatworld.jpg"
     },
     {
       number: "09",
       title: "Banquet",
-      src: "../music/Banquet.mp3",
+      src: "music/Banquet.mp3",
       album: "Silent Alarm",
       artist: "Bloc Party",
-      albumArt: "../img/blocparty.jpg"
+      albumArt: "img/blocparty.jpg"
     },
   ];
 
@@ -92,7 +92,7 @@ $(document).ready(function() {
   const $selectedFilesDisplay = $("#selected-files");
   const $imagesContainer = $("#images-container");
 
-  const buttonClickSound = new Audio("../music/Scanner.mp3");
+  const buttonClickSound = new Audio("music/Scanner.mp3");
 
   let selectedFiles = null;
 
